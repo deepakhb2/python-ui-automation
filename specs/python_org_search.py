@@ -1,14 +1,11 @@
 import unittest
-from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.chrome.options import Options
+from drivers.driver import driver, chrome
 
 class PythonOrgSearch(unittest.TestCase):
 
     def setUp(self):
-        chrome_options = Options()
-        #chrome_options.add_argument("--headless")  # Uncomment this line to run tests using headless.
-        self.driver = webdriver.Chrome('driver/chromedriver', chrome_options=chrome_options)
+        self.driver = driver()
 
     def test_search_in_python_org(self):
         driver = self.driver

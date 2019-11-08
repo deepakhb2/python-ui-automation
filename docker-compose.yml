@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  selenium-python:
+    env_file: .env
+    build: .
+    volumes:
+      - .:/code
+    command: bash -c "python specs/python_org_search.py"

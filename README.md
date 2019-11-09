@@ -1,10 +1,11 @@
 # Selenium UI automation using Python.
-UI automation using python &amp; selenium.
+UI automation using python &amp; selenium. The sample tests are run on chrome and firefox.
+The docker image used supports chrome version 78.0 and Mozilla firefox version 65.0. The docker image repository [docker-selenium-python](https://github.com/deepakhb2/docker-selenium-python)
 
 ## Installation
 
 Install pythng 3.7 and setup the env using pyenv
-- `python3.7 -m venv ./env
+- `python3.7 -m venv ./env`
 - `source env/bin/activate`
 Install selenium using pip
 - `pip install selenium`

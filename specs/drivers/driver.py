@@ -5,6 +5,7 @@ from selenium import webdriver
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
 from selenium.webdriver.chrome.options import Options as ChromeOptions
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 
 
 load_dotenv()
@@ -25,7 +26,9 @@ def chrome():
 
 def firefox():
     options = FirefoxOptions()
+    options.log.level = "trace"
     if(os.environ['HEADLESS'] == "True"):
-        options.add_argument("--headless")
-    cap = DesiredCapabilities().FIREFOX.copy()
-    return webdriver.Firefox(executable_path = f'driver/{sys.platform}/firefox/geckodriver', options=options, capabilities=cap)
+        options.set_headless(headless=True)
+    capabilities = DesiredCapabilities().FIREFOX
+    binary = FirefoxBinary('/firefox/firefox')
+    return webdriver.Firefox(firefox_binary=binary, executable_path = f'driver/{sys.platform}/firefox/geckodriver', options=options, capabilities=capabilities)

@@ -5,8 +5,10 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
 from drivers.driver import driver, chrome
 
+sys.path.insert(1, 'specs/drivers')
 sys.path.insert(1, 'page/')
-import page
+from page import page
+from driver import driver
 
 class PythonOrgSearch(unittest.TestCase):
     """A sample test class to show how page object works"""

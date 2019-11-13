@@ -18,5 +18,8 @@ Check the env-sample file and update the env file depending on the chrome versio
 Run tests on docker.
 - `docker-compose up`
 
+## Azure CI run badge
+[![Build Status](https://dev.azure.com/deepakhb20379/deepakhb2/_apis/build/status/deepakhb2.python-ui-automation?branchName=master)](https://dev.azure.com/deepakhb20379/deepakhb2/_build/latest?definitionId=4&branchName=master)
+
 ## Note
 Ref. https://selenium-python.readthedocs.io/

@@ -14,7 +14,6 @@ class BasePage(object):
     def __init__(self, driver):
         self.driver = driver
 
-
 class MainPage(BasePage):
     """Home page action methods come here. I.e. Python.org"""
 
@@ -24,9 +23,8 @@ class MainPage(BasePage):
     def navigate(self):
         self.driver.get("http://www.python.org")
 
-    def is_title_matches(self):
-        """Verifies that the hardcoded text "Python" appears in page title"""
-        return "Python" in self.driver.title
+    def title(self):
+        return self.driver.title
 
     def click_go_button(self):
         """Triggers the search"""

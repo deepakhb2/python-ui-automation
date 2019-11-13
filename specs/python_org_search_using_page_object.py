@@ -6,7 +6,7 @@ from selenium.webdriver.common.keys import Keys
 
 sys.path.insert(1, 'specs/drivers')
 sys.path.insert(1, 'page/')
-from page import page
+import page
 from driver import driver
 
 class PythonOrgSearch(unittest.TestCase):
